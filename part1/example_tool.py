@@ -1,4 +1,4 @@
-
+import os
 import sys
 import getopt
 
@@ -33,7 +33,10 @@ def convert_yaml_to_json(arg):
 
 
 def new_django_project(arg):
-    print('dsadsa')
+    if test_palindrome(arg) == True:
+        os.system('python3 modusvirtualenv/bin/django-admin.py startproject %s ../part2/' % (arg))
+    else:
+        print('can not start project, name is not a palindromet')
 
 
 def main(argv):
